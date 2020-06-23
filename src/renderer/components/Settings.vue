@@ -11,7 +11,7 @@
         <v-btn :color="option === selectedOption ? 'white' : 'grey'" outlined @click="setOrRemoveOption(option)">{{option}}</v-btn>
       </v-col>
       <v-col cols="auto">
-        <v-btn :disabled="options.length === 0" @click="removeSelectedOption()">
+        <v-btn :disabled="options.length === 0 || running" @click="removeSelectedOption()">
           <v-icon >mdi-minus</v-icon>
         </v-btn>
       </v-col>

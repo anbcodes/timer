@@ -32,7 +32,7 @@ module.exports = function createApp() {
   function createFrameWindow() {
     if (windows.frame) return;
     windows.frame = new BrowserWindow({
-      width: 200,
+      width: 230,
       // width: 1400,
       x: 0,
       y: 0,
