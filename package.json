@@ -5,12 +5,12 @@
   "description": "",
   "author": "",
   "scripts": {
-    "serve": "vue-cli-service build --watch",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service build src/renderer/main.js --watch",
+    "build": "vue-cli-service build src/renderer/main.js",
     "lint": "vue-cli-service lint",
     "start": "electron ."
   },
-  "main": "main.js",
+  "main": "src/main/main.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "electron-store": "^5.2.0",
@@ -36,5 +36,11 @@
   "_id": "timer@1.0.0",
   "keywords": [],
   "license": "ISC",
-  "readme": "ERROR: No README data found!"
+  "readme": "ERROR: No README data found!",
+  "build": {
+    "appId": "your.id",
+    "linux": {
+      "category": "your.app.category.type"
+    }
+  }
 }
