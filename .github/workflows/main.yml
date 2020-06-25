@@ -46,7 +46,7 @@ jobs:
         if: matrix.os != 'windows-latest'
       - name: Cleanup artifacts windows
         run: |
-          npx rimraf "electron-dist\!(*.exe|*.deb|*.AppImage|*.dmg)"
+          npx rimraf "electron-dist\!(*.exe)"
         if: matrix.os == 'windows-latest'
       - name: Release
         uses: softprops/action-gh-release@v1
