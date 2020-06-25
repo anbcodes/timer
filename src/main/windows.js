@@ -1,5 +1,11 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const { app, BrowserWindow, ipcMain } = require('electron');
+const { resolve, join } = require('path');
+const isDev = require('electron-is-dev');
+
+if (isDev) {
+  app.setPath('userData', resolve(join(__dirname, '..', '..', 'electron-data-dir')));
+}
 
 module.exports = function createApp() {
   const windows = { settings: null, frame: null };
