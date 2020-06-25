@@ -43,7 +43,12 @@ jobs:
         run: |
           npx rimraf 'electron-dist/!(*.exe|*.deb|*.AppImage|*.dmg)'
         shell: bash
-        working-directory: 'electron-dist'
+        if: matrix.os != 'windows-latest'
+      - name: Cleanup artifacts windows
+        run: |
+          npx rimraf 'electron-dist\!(*.exe|*.deb|*.AppImage|*.dmg)'
+        if: matrix.os == 'windows-latest'
+        shell: bash
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
