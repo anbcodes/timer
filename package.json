@@ -41,7 +41,7 @@
   },
   "_id": "timer@1.0.0",
   "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "readme": "ERROR: No README data found!",
   "build": {
     "directories": {
@@ -50,11 +50,10 @@
     "appId": "anbcodes.timer",
     "linux": {
       "category": "util.time",
-      "target": "deb",
-      "icon": "512x512.png"
+      "target": "deb"
     },
     "mac": {
-      "icon": "Icon.png",
+      "icon": "Icon.icns",
       "category": "util.time",
       "target": "dmg"
     },
