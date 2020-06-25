@@ -29,6 +29,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: autofix eslint-errors
+        run: |
+          npm run fix
       - name: Build vue
         run: |
           npm run build
