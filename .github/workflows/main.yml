@@ -41,8 +41,9 @@ jobs:
           npm run dist
       - name: Cleanup artifacts
         run: |
-          npx rimraf "electron-dist/!(*.exe|*.deb|*.AppImage|*.dmg)"
+          npx rimraf 'electron-dist/!(*.exe|*.deb|*.AppImage|*.dmg)'
         shell: bash
+        working-directory: 'electron-dist'
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
